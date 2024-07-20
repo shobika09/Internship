@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form name="Calc">
+            <input type="text" name="display" id="display" placeholder="0">
+            <br>
+
+            <input type="button" class="btn" value="7" onclick="addToDisplay('7')">
+            <input type="button" class="btn" value="8" onclick="addToDisplay('8')">
+            <input type="button" class="btn" value="9" onclick="addToDisplay('9')">
+            <input type="button" class="btn mbtn" value="+" onclick="addToDisplay('+')">
+            <br>
+
+            <input type="button" class="btn" value="4" onclick="addToDisplay('4')">
+            <input type="button" class="btn" value="5" onclick="addToDisplay('5')">
+            <input type="button" class="btn" value="6" onclick="addToDisplay('6')">
+            <input type="button" class="btn mbtn" value="-" onclick="addToDisplay('-')">
+            <br>
+
+            <input type="button" class="btn" value="1" onclick="addToDisplay('1')">
+            <input type="button" class="btn" value="2" onclick="addToDisplay('2')">
+            <input type="button" class="btn" value="3" onclick="addToDisplay('3')">
+            <input type="button" class="btn mbtn" value="*" onclick="addToDisplay('*')">
+            <br>
+
+            <input type="button" class="btn cbtn" value="C" onclick="clearDisplay()">
+            <input type="button" class="btn mbtn" value="0" onclick="addToDisplay('0')">
+            <input type="button" class="btn mbtn" value="/" onclick="addToDisplay('/')">
+            <input type="button" class="btn mbtn" value="=" onclick="calculateResult()">
+
+        </form> 
+    </div>
+        
+    <script>
+        function addToDisplay(value) {
+            var display = document.Calc.display;
+            if (display.value === "0") {
+                display.value = value;
+            } else {
+                display.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            document.Calc.display.value = "0";
+        }
+
+        function calculateResult() {
+            var display = document.Calc.display;
+            var expression = display.value;
+            var operators = ['+', '-', '*', '/'];
+            var result;
+            var currentNumber = '';
+            var numbers = [];
+            var ops = [];
+
+            for (var i = 0; i < expression.length; i++) {
+                if (operators.includes(expression[i])) {
+                    numbers.push(parseFloat(currentNumber));
+                    ops.push(expression[i]);
+                    currentNumber = '';
+                } else {
+                    currentNumber += expression[i];
+                }
+            }
+            numbers.push(parseFloat(currentNumber));
+
+            while (ops.length > 0) {
+                var operator = ops.shift();
+                var num1 = numbers.shift();
+                var num2 = numbers.shift();
+                if (operator === '+') {
+                    result = num1 + num2;
+                } else if (operator === '-') {
+                    result = num1 - num2;
+                } else if (operator === '*') {
+                    result = num1 * num2;
+                } else if (operator === '/') {
+                    result = num1 / num2;
+                }
+                numbers.unshift(result);
+            }
+
+            display.value = result;
+        }
+    </script>
+
+</body>
+</html>
+        
+
+   
+  

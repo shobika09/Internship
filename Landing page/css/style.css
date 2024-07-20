@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+ }
+ 
+ body{
+  color: white;
+  word-spacing: 1.5px;
+  letter-spacing: 0.6px;
+ }
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+ nav .sidebar{
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90vh;
+  width: 240px;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  list-style: none;
+   margin-top:10px;
+   padding:15px;
+   padding-top: 10px;
+ }
+
+ .sidebar li{
+  padding: 15px;
+  width: 100%;
+ }
+
+ nav li a{
+  text-decoration: none;
+   width: 50%;
+   list-style: none;
+   font-size: 20px;
+   font-family: sans-serif;
+   color:#fff;
+ }
+
+ .menu{
+  padding: 15px;
+ }
+
+ nav .menu li {
+  list-style: none;
+ }
+
+ .inbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1px;
+  padding-left: 35%;
+ }
+
+.inbar li {
+   list-style: none;
+   padding-left: 30px;
+   font-weight: bolder;
+}
+
+.inbar li a{
+  padding: 15px;
+  font-size: 23px;
+  background: #6e45ea;
+  width: 100%;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+ .sidebar li a:hover, .inbar li a:hover{
+  background-color: lightgrey;
+  color: rgb(67, 67, 67);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.container_h1{
+    width:100%;
+    min-height: 100vh;
+    background-image:url("../Bikes/Wal\ copy.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:100%;
+ }
+
+ .navcontainer{
+   padding: 0px 40px;
+ }
+
+nav h1{
+  font-size: 25px;
+  font-weight: 300px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Lucida Handwriting', 'sans-serif';
+}
+
+.container{
+  width:80%;
+  min-height: 100vh;
+  top: 0;
+  left:0;
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left:5%;
+  padding-top: 4%;
+  word-spacing: 1px;
+  letter-spacing: 0.6px;
+}
+
+.container h2{
+  font-style: none;
+  font-weight: 400;
+  font-size: 43px;
+  text-align: left;
+}
+
+.container h3{
+  font-style: none;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.container p{
+  font-style: none;
+  font-weight: 400;
+  font-size: 29px;
+  text-align: left;
+  padding: 10px 10px 10px 0px;
+  line-height: 50px;
+}
+
+.btn{
+  padding-left: 50%;
+}
+
+button{
+  background-color: rgb(255, 145, 145);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 33px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid rgb(179, 0, 0);
+  box-shadow: 0 0 0 0 rgb(255, 0, 0);
+
+}
+
+button:hover{
+  box-shadow: 0 0 20px 10px rgb(255, 0, 0);
+}
+
+button:hover::before{
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+  from{
+    box-shadow: 0 0 0 0 rgb(255, 0, 0);
+  }
+  to{
+    box-shadow: 0 0 30px rgb(255, 0, 0);
+  }
+}
+
+.info{
+  color: #ffffff;
+  font-family:'Times New Roman', Times, serif;
+  line-height: 40px;
+}
+
+.footerbar{
+  margin-top:5%;
+  background-color: #6532ff;
+  color:rgb(255, 255, 255);
+  font-size: 18px;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
+  margin-bottom:0px ;
+  text-align: center;
+  padding-top: 20px;
+  
+}
+
+.footerbar h2{
+  font-size: 45px;
+  font-weight: 600;
+  padding-bottom: 40px;
+  padding: 10px;
+}
+
+
+.footerbar ul{
+  text-align: left;
+  padding-left: 35%;
+  list-style: none;
+  line-height: 40px;
+  font-size: 23px;
+}
+
+.footerbar li{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.footerbar span{
+  font-size: 50px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.footerbar span:hover{
+  color: #ffffff;
+}
+
+.footerbar li a{
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  font-size:23px ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footerbar p{
+  font-size: 20px;
+  padding-top: 50px;
+  color: #ffffff;
+}
+
+section{
+    color:rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.containerc1{
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    grid-auto-flow:row;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 10px;
+    row-gap: 60px;
+    column-gap:50px;
+}
+
+.container-item1{
+   background:#414141;
+   border-radius: 30px;
+   padding: 20px 10px 30px 20px;
+   padding-bottom: 29px;
+   box-shadow: 9px 15px 30px rgb(0, 0, 0);
+}
+
+
+.container-item1 h2{
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container-item1 p{
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.container-item1 p span{
+  font-size: 28px;
+  font-weight:600;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.container-item1 h2 span{
+  padding-top: 10px;
+}
+
+.img{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.containerc2{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background:#9c9c9c;
+  box-shadow: 15px 15px 30px black;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 50px 50px 0;
+}
+
+.container-item2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images{
+  width: 100px;
+  height: 500px;
+  margin: 10px 10px 10px 5px;
+  border-radius: 50px;
+  background: url('../Bikes/Bike10.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: 0.6s ease;
+}
+
+.images:nth-child(2){
+  background: url('../Bikes/Bike1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(3){
+  background: url('../Bikes/Bike2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(4){
+  background: url('../Bikes/Bike3.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(5){
+  background: url('../Bikes/Bike4.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(6){
+  background: url('../Bikes/Bike5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(7){
+  background: url('../Bikes/Bike6.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(8){
+  background: url('../Bikes/Bike7.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(9){
+  background: url('../Bikes/Bike8.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images:nth-child(10){
+  background: url('../Bikes/Bike9.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.images h3,.images a{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0;
+  transition: bottom 0.6s, opacity 0.5s;
+}
+
+.images:hover{
+  width: 300px;
+  cursor: pointer;
+}
+
+.images:hover h3{
+  opacity: 1;
+  bottom: 50px;
+}
+
+.images:hover a{
+  opacity: 1;
+  bottom: 15px;
+  color: #897fff;
+}
+
+.container-item2 h2{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
